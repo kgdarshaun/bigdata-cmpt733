@@ -1,0 +1,52 @@
+
+{
+    "version": 1,
+    "request": {
+        "url": "https://www.cheapshark.com/api/1.0/games",
+        "method": "GET",
+		"headers": null,
+		"params": {
+			"title": "batman"
+		},
+		"body": null,
+		"cookies": null,
+		"authorization": null,
+		"pagination": null,
+		"search": null
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$[*]",
+        "schema": {
+			"gameID" : {
+				"target": "$.gameID",
+				"type": "int"
+			},
+			"steamAppID" : {
+				"target": "$.steamAppID",
+				"type": "int"
+			},
+			"cheapest" : {
+				"target": "$.cheapest",
+				"type": "float"
+			},
+			"cheapestDealID" : {
+				"target": "$.cheapestDealID",
+				"type": "string"
+			},
+			"external" : {
+				"target": "$.external",
+				"type": "string"
+			},
+			"internalName" : {
+				"target": "$.internalName",
+				"type": "string"
+			},
+			"thumb" : {
+				"target": "$.thumb",
+				"type": "string"
+			}
+		},
+        "orient": "records"
+    }
+}

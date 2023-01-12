@@ -1,0 +1,98 @@
+
+{
+    "version": 1,
+    "request": {
+        "url": "https://www.cheapshark.com/api/1.0/deals",
+        "method": "GET",
+		"headers": null,
+		"params": {},
+		"body": null,
+		"cookies": null,
+		"authorization": null,
+		"pagination": null,
+		"search": null
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$[*]",
+        "schema": {
+			"internalName" : {
+				"target": "$.internalName",
+				"type": "string"
+			},
+			"title" : {
+				"target": "$.title",
+				"type": "string"
+			},
+			"metacriticLink" : {
+				"target": "$.metacriticLink",
+				"type": "string"
+			},
+			"dealID" : {
+				"target": "$.dealID",
+				"type": "string"
+			},
+			"storeID" : {
+				"target": "$.storeID",
+				"type": "int"
+			},
+			"gameID" : {
+				"target": "$.gameID",
+				"type": "int"
+			},
+			"salePrice" : {
+				"target": "$.salePrice",
+				"type": "float"
+			},
+			"normalPrice" : {
+				"target": "$.normalPrice",
+				"type": "float"
+			},
+			"isOnSale" : {
+				"target": "$.isOnSale",
+				"type": "boolean"
+			},
+			"savings" : {
+				"target": "$.savings",
+				"type": "float"
+			},
+			"metacriticScore" : {
+				"target": "$.metacriticScore",
+				"type": "int"
+			},
+			"steamRatingText" : {
+				"target": "$.steamRatingText",
+				"type": "string"
+			},
+			"steamRatingPercent" : {
+				"target": "$.steamRatingPercent",
+				"type": "int"
+			},
+			"steamRatingCount" : {
+				"target": "$.steamRatingCount",
+				"type": "float"
+			},
+			"steamAppID" : {
+				"target": "$.steamAppID",
+				"type": "int"
+			},
+			"releaseDate" : {
+				"target": "$.releaseDate",
+				"type": "int"
+			},
+			"lastChange" : {
+				"target": "$.lastChange",
+				"type": "int"
+			},
+			"dealRating" : {
+				"target": "$.dealRating",
+				"type": "float"
+			},
+			"thumb" : {
+				"target": "$.thumb",
+				"type": "string"
+			}
+		},
+        "orient": "records"
+    }
+}

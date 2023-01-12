@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "request": {
+        "url": "https://www.cheapshark.com/api/1.0/stores",
+        "method": "GET",
+		"headers": null,
+		"params": {},
+		"body": null,
+		"cookies": null,
+		"authorization": null,
+		"pagination": null,
+		"search": null
+    },
+    "examples": null,
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$[*]",
+        "schema": {
+            "id": {
+                "target": "$.storeID",
+                "type": "int"
+            },
+            "storeName": {
+                "target": "$.storeName",
+                "type": "string"
+            },
+            "isActive": {
+                "target": "$.isActive",
+                "type": "boolean"
+            },
+            "images": {
+                "target": "$.images",
+                "type": "object"
+            }        
+        },
+      "orient":"records"
+   }
+}
