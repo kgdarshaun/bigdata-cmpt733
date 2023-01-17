@@ -1,0 +1,9 @@
+{
+	"tables": [
+		"deals",
+		"games",
+		"stores",
+		"game_lookup",
+		"deal_lookup"
+	]
+}

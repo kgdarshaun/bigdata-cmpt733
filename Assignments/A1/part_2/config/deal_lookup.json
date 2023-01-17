@@ -1,0 +1,96 @@
+
+{
+    "version": 1,
+    "request": {
+        "url": "https://www.cheapshark.com/api/1.0/deals",
+        "method": "GET",
+		"headers": null,
+		"params": {
+			"id": true
+		},
+		"body": null,
+		"cookies": null,
+		"authorization": null,
+		"pagination": null,
+		"search": null
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$",
+        "schema": {
+			"storeID" : {
+				"target": "$.gameInfo.storeID",
+				"type": "int"
+			},
+			"gameID" : {
+				"target": "$.gameInfo.gameID",
+				"type": "int"
+			},
+			"name" : {
+				"target": "$.gameInfo.name",
+				"type": "string"
+			},
+			"steamAppID": {
+				"target": "$.gameInfo.steamAppID",
+				"type": "int"
+			},
+			"salePrice": {
+				"target": "$.gameInfo.salePrice",
+				"type": "float"
+			},
+			"retailPrice": {
+				"target": "$.gameInfo.retailPrice",
+				"type": "float"
+			},
+			"steamRatingText": {
+				"target": "$.gameInfo.steamRatingText",
+				"type": "string"
+			},
+			"steamRatingPercent": {
+				"target": "$.gameInfo.steamRatingPercent",
+				"type": "int"
+			},
+			"steamRatingCount": {
+				"target": "$.gameInfo.steamRatingCount",
+				"type": "int"
+			},
+			"metacriticScore": {
+				"target": "$.gameInfo.metacriticScore",
+				"type": "int"
+			},
+			"metacriticLink": {
+				"target": "$.gameInfo.metacriticLink",
+				"type": "int"
+			},
+			"releaseDate": {
+				"target": "$.gameInfo.releaseDate",
+				"type": "int"
+			},
+			"publisher": {
+				"target": "$.gameInfo.publisher",
+				"type": "string"
+			},
+			"chapestStoreDealId": {
+				"target": "$.cheaperStores.dealID",
+				"type": "string"
+			},
+			"CheapestStoreId": {
+				"target": "$.cheaperStores.storeID",
+				"type": "int"
+			},
+			"CheapestStoreSalesPrice": {
+				"target": "$.cheaperStores.salePrice",
+				"type": "float"
+			},
+			"cheapestPrice": {
+				"target": "$.cheapestPrice.price",
+				"type": "float"
+			},
+			"cheapestPriceDate": {
+				"target": "$.cheapestPrice.date",
+				"type": "int"
+			}
+		},
+        "orient": "records"
+    }
+}

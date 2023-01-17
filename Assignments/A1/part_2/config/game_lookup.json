@@ -1,0 +1,44 @@
+
+{
+    "version": 1,
+    "request": {
+        "url": "https://www.cheapshark.com/api/1.0/games",
+        "method": "GET",
+		"headers": null,
+		"params": {
+			"id": true
+		},
+		"body": null,
+		"cookies": null,
+		"authorization": null,
+		"pagination": null,
+		"search": null
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$",
+        "schema": {
+			"title" : {
+				"target": "$.info.title",
+				"type": "string"
+			},
+			"steamAppID" : {
+				"target": "$.info.steamAppID",
+				"type": "int"
+			},
+			"cheapestPrice" : {
+				"target": "$.cheapestPriceEver.price",
+				"type": "float"
+			},
+			"cheapestPriceDate" : {
+				"target": "$.cheapestPriceEver.date",
+				"type": "int"
+			},
+			"deals" : {
+				"target": "$.deals[*]",
+				"type": "object"
+			}
+		},
+        "orient": "records"
+    }
+}

@@ -6,7 +6,10 @@
         "method": "GET",
 		"headers": null,
 		"params": {
-			"title": "batman"
+			"title": false,
+			"steamAppID": false,
+			"limit": false,
+			"exact": false
 		},
 		"body": null,
 		"cookies": null,
