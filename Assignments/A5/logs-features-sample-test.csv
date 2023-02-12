@@ -1,0 +1,6 @@
+id,features
+0,"['http', 'udt', 4]"
+1,"['http', 'udf', 5]"
+2,"['http', 'tcp', 5]"
+3,"['ftp', 'icmp', 1]"
+4,"['http', 'tcp', 4]"
