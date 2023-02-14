@@ -13,7 +13,10 @@ class AnomalyDetection():
 	def scaleNumInternal(self, df, ind):
 		mean = df[ind].astype(float).mean()
 		std = df[ind].astype(float).std()
-		df['features'] = df['features'] + ',' + df[ind].apply(lambda x : str((float(x)-mean)/std))
+		if std !=0 :
+			df['features'] = df['features'] + ',' + df[ind].apply(lambda x : str((float(x)-mean)/std))
+		else :
+			df['features'] = df['features'] + ',' + df[ind].apply(lambda x : str(float(x)))
 		return df
 
 	def cat2NumInternal(self, df, ind):
@@ -89,7 +92,7 @@ if __name__ == "__main__":
 	df1 = ad.cat2Num(df, [0,1])
 	print(df1)
 
-	df2 = ad.scaleNum(df1, [6])
+	df2 = ad.scaleNum(df1, range(12, 50))
 	print(df2)
 
 	df3 = ad.detect(df2, 8, 0.97)
